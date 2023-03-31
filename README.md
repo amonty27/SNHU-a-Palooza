@@ -1,1 +1,1 @@
-# SNHU-a-Palooza
+# CourseBuildTest

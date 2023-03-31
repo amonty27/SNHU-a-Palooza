@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+  <title>Ticekt Information</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+  <meta
+  name="description"
+  content="Get tickets for SNHU-a-Palooza" />
+
+</head>
+<!-- Script to handle error checking for the form-->
+<script>
+  function validateForm() {
+    var x = document.forms["myForm"]["FirstName"].value;
+    var y = document.forms["myForm"]["LastName"].value;
+    var z = document.forms["myForm"]["PhoneNum"].value;
+    var w = document.forms["myForm"]["Email"].value
+
+    if(x == null || x == "" || y == null || y == "") {
+      alert("You must insert a first and last name.");
+      return false;
+    }
+    if(z == "" || isNaN(z) || z.length != 10) {
+      alert("Please provide a number in the format ##########.");
+      document.myForm.PhoneNum.focus();
+      return false;
+    }
+    if(w==""){
+      alert("Please provide a valid email address.");
+      document.myForm.Email.focus();
+      return false;
+    }
+  }
+</script>
+
+<body>
+  <!-- Wrapper -->
+  <div id="wrapper">
+    <!-- Header -->
+    <header id="header">
+      <h1><a href="index.html">SNHU-a-Palooza</a></h1>
+      <nav class="links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="#">Tickets</a></li>
+        </ul>
+      </nav>
+      <nav class="main">
+        <ul>
+          <li class="menu">
+            <a class="fa-bars" href="#menu">Menu</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Menu -->
+    <section id="menu">
+      <!-- Links -->
+      <section>
+        <ul class="links">
+          <li>
+            <a href="index.html">
+              <h3>Home</h3>
+              <p>HomePage</p>
+            </a>
+          </li>
+          <li>
+            <a href="experience.html">
+              <h3>Experience</h3>
+              <p>Learn more about SNHU-a-Palooza</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <h3>Tickets</h3>
+              <p>View and Purchase Tickets</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <!-- Main -->
+    <div id="main">
+      <section id="intro">
+        <header>
+          <h2>SNHU-a-Palooza</h2>
+          <p>Tickets</p>
+        </header>
+        </iframe>
+      </section>
+      <!-- Info -->
+      <section id = "ticketInfo">
+        <div id="tic-list">
+          <div class="tic-item">
+            <img src="images/Pic04Mid.jpg" alt="Text on a blue background that says, This concert is free!" />
+            <p>This concert is free for everyone!</p>
+          </div>
+          <div class="tic-item">
+            <img src="images/Pic05Mid.jpg" alt="Text on a blue background that says, Register Now! You must show valid ID or printout to attend!" />
+            <p>Register for this concert by filling out the form below!</p>
+            
+          </div>
+        </div>
+      <!-- Form -->
+      </section id="form">
+      <div id="form-wrap">
+      <form action="regForm.php" method="post" name="myForm" onsubmit="return validateForm()">
+        <p>First Name: <input type="text" name="FirstName"></p>
+        <p>Last Name: <input type="text" name="LastName"></p>
+        <p>Phone Number: <input type="text" name="PhoneNum"></p>
+        <p>Email: <input type="email" name="Email"></p>
+        <input type = "submit" name = "submit" value = "Submit"/>
+      </form>
+      </div>
+    </div>
+    <!-- Footer -->
+    <section id="footer">
+      <p class="copyright">&copy; SNHU-a-Palooza. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+    </section>
+  </div>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
